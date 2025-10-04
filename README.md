@@ -17,7 +17,7 @@ root.resizable(False, False)
 # Надпись "Привет друг!"
 label = tk.Label(
     root, 
-    text="Привет друг!", 
+    text="Привет друн!", 
     font=("Arial", 16, "bold"),
     fg="blue"
 )
