@@ -1,39 +1,24 @@
 import tkinter as tk
-import sys
-import os
-import subprocess
+from datetime import datetime
 
-def restart_program():
-    """Перезапускает программу"""
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
-
-# Создаем главное окно
+# Простое приложение
 root = tk.Tk()
-root.title("Приветствие")
-root.geometry("300x150")
-root.resizable(False, False)
+root.title("Приложение из GitHub")
+root.geometry("400x300")
 
-# Надпись "Привет друy!"
-label = tk.Label(
-    root, 
-    text="Иди нахуйй!", 
-    font=("Arial", 16, "bold"),
-    fg="blue"
-)
-label.pack(pady=20)
+# Заголовок
+label = tk.Label(root, text="🎉 Код запущен из GitHub!", 
+                font=("Arial", 16), fg="green")
+label.pack(pady=50)
 
-# Кнопка "Перезапустить"
-restart_button = tk.Button(
-    root,
-    text="Перезапустить",
-    command=restart_program,
-    font=("Arial", 12),
-    bg="lightgreen",
-    padx=10,
-    pady=5
-)
-restart_button.pack(pady=10)
+# Информация
+info = tk.Label(root, text=f"Запущено: {datetime.now()}", 
+               font=("Arial", 12))
+info.pack(pady=20)
 
-# Запускаем главный цикл
+# Кнопка
+button = tk.Button(root, text="Закрыть", command=root.quit,
+                  font=("Arial", 12))
+button.pack(pady=20)
+
 root.mainloop()
