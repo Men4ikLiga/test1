@@ -14,7 +14,7 @@ root.title("Приветствие")
 root.geometry("300x150")
 root.resizable(False, False)
 
-# Надпись "Привет друг!"
+# Надпись "Привет друy!"
 label = tk.Label(
     root, 
     text="Привет друн!", 
